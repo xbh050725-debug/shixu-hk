@@ -364,7 +364,7 @@ button:focus-visible,input:focus-visible{outline:2px solid rgba(240,160,0,.55);o
   .cols{grid-template-columns:1fr;gap:18px;justify-items:center}}
 </style>
 </head>
-<body class="">
+<body class="has-res">
 <div class="wrap">
   <header>
     <div class="brand">食咩好<span>AI Food Navigator · Review Analytics</span></div>
@@ -384,12 +384,12 @@ button:focus-visible,input:focus-visible{outline:2px solid rgba(240,160,0,.55);o
       <button id="go">Go</button>
     </div>
     <div class="egs" id="egs"><span>Try:</span><span class="eg">Quick noodle bowl for one under $50</span><span class="eg">Date night with my girlfriend, quiet and instagrammable</span><span class="eg">Dim sum with my parents, around $150 per person</span><span class="eg">Late-night supper after work, something spicy</span><span class="eg">Friends gathering, Thai food, Mong Kok</span><span class="egsep">中文 / 廣東話</span><span class="eg cn">铜锣湾有什么好吃的，想拍照</span><span class="eg cn">旺角 茶餐厅，赶时间</span><span class="eg cn">收工食宵夜，想食辣，唔太贵</span></div>
-    <div class="qres" id="qres"><span class="lbl">I read this as</span><span class="slot"><b>Who with: Friends Gathering</b><i data-k="scene" data-v="Friends Gathering" data-g="who">×</i></span></div>
-    <div class="qhint" id="qhint" style="display: none;">Parsed into 1 condition(s): scenes check the shop profile, cuisine checks the family table, area checks the district, budget checks average spend. Click × to correct anything.</div>
+    <div class="qres on" id="qres"><span class="lbl">I read this as</span><span class="slot"><b>Who with: Friends Gathering</b><i data-k="scene" data-v="Friends Gathering" data-g="who">×</i></span></div>
+    <div class="qhint" id="qhint" style="display: block;">Parsed into 1 condition(s): scenes check the shop profile, cuisine checks the family table, area checks the district, budget checks average spend. Click × to correct anything.</div>
 
     <div id="groups">
     <div class="sgroup"><label>Who with</label><div class="chips">
-      <button class="chip " data-g="who" data-id="Solo Dining">Solo Dining</button><button class="chip " data-g="who" data-id="Date Night">Date Night</button><button class="chip " data-g="who" data-id="Friends Gathering">Friends Gathering</button><button class="chip " data-g="who" data-id="With Parents">With Parents</button><button class="chip " data-g="who" data-id="Family with Kids">Family with Kids</button>
+      <button class="chip " data-g="who" data-id="Solo Dining">Solo Dining</button><button class="chip " data-g="who" data-id="Date Night">Date Night</button><button class="chip on" data-g="who" data-id="Friends Gathering">Friends Gathering</button><button class="chip " data-g="who" data-id="With Parents">With Parents</button><button class="chip " data-g="who" data-id="Family with Kids">Family with Kids</button>
     </div></div>
     <div class="sgroup"><label>Pace</label><div class="chips">
       <button class="chip " data-g="pace" data-id="Quick Bite">Quick Bite</button><button class="chip " data-g="pace" data-id="Take It Slow">Take It Slow</button><button class="chip " data-g="pace" data-id="Late Night">Late Night</button><button class="chip " data-g="pace" data-id="Breakfast">Breakfast</button>
@@ -399,118 +399,76 @@ button:focus-visible,input:focus-visible{outline:2px solid rgba(240,160,0,.55);o
     </div></div></div>
   </section>
 
-  <div class="results" id="results">
+  <div class="results on" id="results">
     <div class="toolbar">
-      <h2 id="listTitle">All <b>50</b> shops · by overall score <span class="showing">showing top 12</span></h2>
+      <h2 id="listTitle">Filtered: <b>Friends Gathering</b> · <b>17</b> matches <span class="showing">showing top 12</span></h2>
       <label class="switch"><input type="checkbox" id="hideFake" checked=""> Hide low-credibility reviews</label>
     </div>
 
-    <div class="grid" id="grid"><article class="card" data-id="s12">
-      <div class="thumb ">
-        <img src="images/s12_1.jpg" alt="麵屋一番" loading="lazy">
-        <span class="rank r1">No.1</span>
-      </div>
-      <div class="cbody">
-      <div class="card-top">
-        <div><h3>麵屋一番</h3><div class="meta">Tin Hau · Ramen · $118 pp</div></div>
-        <div class="rt"><div class="score">4.0</div><div class="stars">★★★★☆</div></div>
-      </div>
-      <div class="scenes"><span class="s g-who ">Solo Dining</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Exotic Flavors</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Cozy</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:84.39999999999999%"></div></div><i>4.2</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:76.6%"></div></div><i>3.8</i></div><div class="bar"><b>Ambience</b><div class="track">
-    <div class="fill" style="width:80%"></div></div><i>4.0</i></div><div class="bar"><b>Environment</b><div class="track">
-    <div class="fill" style="width:80%"></div></div><i>4.0</i></div></div>
-      <p class="why">Taste stands out (4.2/5, 9 mentions)<br><em>“汤头够浓”</em></p>
-      <div class="foot">
-        <span>21 reviews · 95% credible</span>
-        <span class="flag">1 flagged · Details →</span>
-      </div>
-      </div>
-    </article><article class="card" data-id="s22">
-      <div class="thumb ">
-        <img src="images/s22_1.jpg" alt="榕樹頭茶檔" loading="lazy">
-        <span class="rank r2">No.2</span>
-      </div>
-      <div class="cbody">
-      <div class="card-top">
-        <div><h3>榕樹頭茶檔</h3><div class="meta">Sai Ying Pun · Tea Stall · $45 pp</div></div>
-        <div class="rt"><div class="score">4.4</div><div class="stars">★★★★☆</div></div>
-      </div>
-      <div class="scenes"><span class="s g-who ">Solo Dining</span><span class="s g-pace ">Breakfast</span><span class="s g-taste ">Budget Eats</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:90%"></div></div><i>4.5</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:86.6%"></div></div><i>4.3</i></div><div class="bar"><b>Ambience</b><div class="track"></div><i>—</i></div><div class="bar"><b>Environment</b><div class="track"></div><i>—</i></div></div>
-      <p class="why">Taste stands out (4.5/5, 4 mentions)<em>(only 6 reviews — score unstable)</em><br><em>“冰量可以叫少冰，好貼心”</em></p>
-      <div class="foot">
-        <span>6 reviews · 100% credible</span>
-        <span class="">Details →</span>
-      </div>
-      </div>
-    </article><article class="card" data-id="s17">
+    <div class="grid" id="grid"><article class="card" data-id="s17">
       <div class="thumb ">
         <img src="images/s17_1.jpg" alt="越香牛肉粉" loading="lazy">
-        <span class="rank r3">No.3</span>
+        <span class="rank r1">No.1</span>
       </div>
       <div class="cbody">
       <div class="card-top">
         <div><h3>越香牛肉粉</h3><div class="meta">To Kwa Wan · Vietnamese · $72 pp</div></div>
         <div class="rt"><div class="score">3.8</div><div class="stars">★★★⯨☆</div></div>
       </div>
-      <div class="scenes"><span class="s g-who ">Friends Gathering</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Budget Eats</span><span class="s g-taste ">Exotic Flavors</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Budget Eats</span><span class="s g-taste ">Exotic Flavors</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
     <div class="fill" style="width:68.60000000000001%"></div></div><i>3.4</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:82.4%"></div></div><i>4.1</i></div><div class="bar"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:82.4%"></div></div><i>4.1</i></div><div class="bar hi"><b>Ambience</b><div class="track">
     <div class="fill" style="width:93.39999999999999%"></div></div><i>4.7</i></div><div class="bar"><b>Environment</b><div class="track">
     <div class="fill" style="width:68%"></div></div><i>3.4</i></div></div>
-      <p class="why">Ambience stands out (4.7/5, 3 mentions)<br><em>“影相好靚”</em></p>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Ambience stands out (4.7/5, 3 mentions)<br><em>“影相好靚”</em></p>
       <div class="foot">
         <span>21 reviews · 100% credible</span>
-        <span class="">Details →</span>
-      </div>
-      </div>
-    </article><article class="card" data-id="s21">
-      <div class="thumb ">
-        <img src="images/s21_1.jpg" alt="深井燒鵝棧" loading="lazy">
-        
-      </div>
-      <div class="cbody">
-      <div class="card-top">
-        <div><h3>深井燒鵝棧</h3><div class="meta">Tsuen Wan · Roast Goose · $155 pp</div></div>
-        <div class="rt"><div class="score">3.8</div><div class="stars">★★★⯨☆</div></div>
-      </div>
-      <div class="scenes"><span class="s g-who ">With Parents</span><span class="s g-who ">Family with Kids</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Instagrammable</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:81.8%"></div></div><i>4.1</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:64%"></div></div><i>3.2</i></div><div class="bar"><b>Ambience</b><div class="track">
-    <div class="fill" style="width:76%"></div></div><i>3.8</i></div><div class="bar"><b>Environment</b><div class="track">
-    <div class="fill" style="width:70%"></div></div><i>3.5</i></div></div>
-      <p class="why">Taste stands out (4.1/5, 11 mentions)<br><em>“老店就是老店”</em></p>
-      <div class="foot">
-        <span>23 reviews · 100% credible</span>
         <span class="">Details →</span>
       </div>
       </div>
     </article><article class="card" data-id="s09">
       <div class="thumb ">
         <img src="images/s09_1.jpg" alt="Seoul Table 韓式烤肉" loading="lazy">
-        
+        <span class="rank r2">No.2</span>
       </div>
       <div class="cbody">
       <div class="card-top">
         <div><h3>Seoul Table 韓式烤肉</h3><div class="meta">Tsim Sha Tsui · Korean · $265 pp</div></div>
         <div class="rt"><div class="score">3.6</div><div class="stars">★★★⯨☆</div></div>
       </div>
-      <div class="scenes"><span class="s g-who ">Date Night</span><span class="s g-who ">Friends Gathering</span><span class="s g-pace ">Late Night</span><span class="s g-taste ">Fine Dining</span><span class="s g-taste ">Exotic Flavors</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Refined</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
+      <div class="scenes"><span class="s g-who ">Date Night</span><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Late Night</span><span class="s g-taste ">Fine Dining</span><span class="s g-taste ">Exotic Flavors</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Refined</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
     <div class="fill" style="width:81.19999999999999%"></div></div><i>4.1</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:62.4%"></div></div><i>3.1</i></div><div class="bar"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:62.4%"></div></div><i>3.1</i></div><div class="bar hi"><b>Ambience</b><div class="track">
     <div class="fill" style="width:84.60000000000001%"></div></div><i>4.2</i></div><div class="bar"><b>Environment</b><div class="track">
     <div class="fill" style="width:65%"></div></div><i>3.3</i></div></div>
-      <p class="why">Ambience stands out (4.2/5, 13 mentions)<br><em>“冷氣唔夠，食到出汗”</em></p>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Ambience stands out (4.2/5, 13 mentions)<br><em>“冷氣唔夠，食到出汗”</em></p>
       <div class="foot">
         <span>60 reviews · 98% credible</span>
         <span class="flag">1 flagged · Details →</span>
+      </div>
+      </div>
+    </article><article class="card" data-id="s05">
+      <div class="thumb ">
+        <img src="images/s05_1.jpg" alt="牛棚牛肉麵" loading="lazy">
+        <span class="rank r3">No.3</span>
+      </div>
+      <div class="cbody">
+      <div class="card-top">
+        <div><h3>牛棚牛肉麵</h3><div class="meta">Sham Shui Po · Taiwanese · $78 pp</div></div>
+        <div class="rt"><div class="score">3.6</div><div class="stars">★★★⯨☆</div></div>
+      </div>
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Instagrammable</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:85.60000000000001%"></div></div><i>4.3</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:60.8%"></div></div><i>3.0</i></div><div class="bar hi"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:82.2%"></div></div><i>4.1</i></div><div class="bar"><b>Environment</b><div class="track">
+    <div class="fill" style="width:62.4%"></div></div><i>3.1</i></div></div>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Ambience stands out (4.1/5, 9 mentions)<br><em>“服务员爱答不理”</em></p>
+      <div class="foot">
+        <span>42 reviews · 92% credible</span>
+        <span class="flag">3 flagged · Details →</span>
       </div>
       </div>
     </article><article class="card" data-id="s11">
@@ -523,79 +481,15 @@ button:focus-visible,input:focus-visible{outline:2px solid rgba(240,160,0,.55);o
         <div><h3>大排檔1958</h3><div class="meta">Jordan · Dai Pai Dong · $95 pp</div></div>
         <div class="rt"><div class="score">3.7</div><div class="stars">★★★⯨☆</div></div>
       </div>
-      <div class="scenes"><span class="s g-who ">Friends Gathering</span><span class="s g-who ">Family with Kids</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-who ">Family with Kids</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
     <div class="fill" style="width:77%"></div></div><i>3.9</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:53.400000000000006%"></div></div><i>2.7</i></div><div class="bar"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:53.400000000000006%"></div></div><i>2.7</i></div><div class="bar hi"><b>Ambience</b><div class="track">
     <div class="fill" style="width:80%"></div></div><i>4.0</i></div><div class="bar"><b>Environment</b><div class="track">
     <div class="fill" style="width:90%"></div></div><i>4.5</i></div></div>
-      <p class="why">Environment stands out (4.5/5, 2 mentions)<br><em>“逼係逼，但好有地道感覺”</em></p>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Ambience stands out (4.0/5, 5 mentions)<br><em>“逼係逼，但好有地道感覺”</em></p>
       <div class="foot">
         <span>23 reviews · 100% credible</span>
-        <span class="">Details →</span>
-      </div>
-      </div>
-    </article><article class="card" data-id="s13">
-      <div class="thumb ">
-        <img src="images/s13_1.jpg" alt="泰滋味" loading="lazy">
-        
-      </div>
-      <div class="cbody">
-      <div class="card-top">
-        <div><h3>泰滋味</h3><div class="meta">Kowloon City · Thai · $145 pp</div></div>
-        <div class="rt"><div class="score">3.7</div><div class="stars">★★★⯨☆</div></div>
-      </div>
-      <div class="scenes"><span class="s g-who ">With Parents</span><span class="s g-who ">Family with Kids</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Exotic Flavors</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Cozy</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:88.00000000000001%"></div></div><i>4.4</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:57.199999999999996%"></div></div><i>2.9</i></div><div class="bar"><b>Ambience</b><div class="track">
-    <div class="fill" style="width:66.60000000000001%"></div></div><i>3.3</i></div><div class="bar"><b>Environment</b><div class="track"></div><i>—</i></div></div>
-      <p class="why">Taste stands out (4.4/5, 10 mentions)<br><em>“deep, clean broth”</em></p>
-      <div class="foot">
-        <span>22 reviews · 95% credible</span>
-        <span class="flag">1 flagged · Details →</span>
-      </div>
-      </div>
-    </article><article class="card" data-id="s02">
-      <div class="thumb ">
-        <img src="images/s02_1.jpg" alt="御膳閣點心" loading="lazy">
-        
-      </div>
-      <div class="cbody">
-      <div class="card-top">
-        <div><h3>御膳閣點心</h3><div class="meta">Tsim Sha Tsui · Dim Sum · $285 pp</div></div>
-        <div class="rt"><div class="score">3.6</div><div class="stars">★★★⯨☆</div></div>
-      </div>
-      <div class="scenes"><span class="s g-who ">Friends Gathering</span><span class="s g-who ">With Parents</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Fine Dining</span><span class="s g-taste ">Instagrammable</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Refined</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:83.80000000000001%"></div></div><i>4.2</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:64.8%"></div></div><i>3.2</i></div><div class="bar"><b>Ambience</b><div class="track">
-    <div class="fill" style="width:66.2%"></div></div><i>3.3</i></div><div class="bar"><b>Environment</b><div class="track">
-    <div class="fill" style="width:69.4%"></div></div><i>3.5</i></div></div>
-      <p class="why">Taste stands out (4.2/5, 36 mentions)<br><em>“皮够薄，不会一夹就散”</em></p>
-      <div class="foot">
-        <span>60 reviews · 93% credible</span>
-        <span class="flag">4 flagged · Details →</span>
-      </div>
-      </div>
-    </article><article class="card" data-id="s24">
-      <div class="thumb ">
-        <img src="images/s24_1.jpg" alt="巷仔雲吞麵" loading="lazy">
-        
-      </div>
-      <div class="cbody">
-      <div class="card-top">
-        <div><h3>巷仔雲吞麵</h3><div class="meta">Sham Shui Po · Noodle Shop · $46 pp</div></div>
-        <div class="rt"><div class="score">4.1</div><div class="stars">★★★★☆</div></div>
-      </div>
-      <div class="scenes"><span class="s g-who ">Solo Dining</span><span class="s g-pace ">Quick Bite</span><span class="s g-taste ">Budget Eats</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:84.00000000000001%"></div></div><i>4.2</i></div><div class="bar"><b>Service</b><div class="track"></div><i>—</i></div><div class="bar"><b>Ambience</b><div class="track">
-    <div class="fill" style="width:90%"></div></div><i>4.5</i></div><div class="bar"><b>Environment</b><div class="track">
-    <div class="fill" style="width:70%"></div></div><i>3.5</i></div></div>
-      <p class="why">Ambience stands out (4.5/5, 2 mentions)<br><em>“quiet enough to actually talk”</em></p>
-      <div class="foot">
-        <span>9 reviews · 100% credible</span>
         <span class="">Details →</span>
       </div>
       </div>
@@ -609,60 +503,168 @@ button:focus-visible,input:focus-visible{outline:2px solid rgba(240,160,0,.55);o
         <div><h3>滿福餃子館</h3><div class="meta">Wan Chai · Sichuan &amp; Shanghai · $88 pp</div></div>
         <div class="rt"><div class="score">3.7</div><div class="stars">★★★⯨☆</div></div>
       </div>
-      <div class="scenes"><span class="s g-who ">Friends Gathering</span><span class="s g-pace ">Quick Bite</span><span class="s g-taste ">Budget Eats</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Quick Bite</span><span class="s g-taste ">Budget Eats</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
     <div class="fill" style="width:75%"></div></div><i>3.8</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:60%"></div></div><i>3.0</i></div><div class="bar"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:60%"></div></div><i>3.0</i></div><div class="bar hi"><b>Ambience</b><div class="track">
     <div class="fill" style="width:75%"></div></div><i>3.8</i></div><div class="bar"><b>Environment</b><div class="track">
     <div class="fill" style="width:85%"></div></div><i>4.3</i></div></div>
-      <p class="why">Environment stands out (4.3/5, 4 mentions)<br><em>“不算闷，坐下挺舒服”</em></p>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Ambience stands out (3.8/5, 4 mentions)<br><em>“店员说快了说了三次”</em></p>
       <div class="foot">
         <span>20 reviews · 100% credible</span>
         <span class="">Details →</span>
       </div>
       </div>
-    </article><article class="card" data-id="s05">
+    </article><article class="card" data-id="s02">
       <div class="thumb ">
-        <img src="images/s05_1.jpg" alt="牛棚牛肉麵" loading="lazy">
+        <img src="images/s02_1.jpg" alt="御膳閣點心" loading="lazy">
         
       </div>
       <div class="cbody">
       <div class="card-top">
-        <div><h3>牛棚牛肉麵</h3><div class="meta">Sham Shui Po · Taiwanese · $78 pp</div></div>
+        <div><h3>御膳閣點心</h3><div class="meta">Tsim Sha Tsui · Dim Sum · $285 pp</div></div>
         <div class="rt"><div class="score">3.6</div><div class="stars">★★★⯨☆</div></div>
       </div>
-      <div class="scenes"><span class="s g-who ">Friends Gathering</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Instagrammable</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:85.60000000000001%"></div></div><i>4.3</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:60.8%"></div></div><i>3.0</i></div><div class="bar"><b>Ambience</b><div class="track">
-    <div class="fill" style="width:82.2%"></div></div><i>4.1</i></div><div class="bar"><b>Environment</b><div class="track">
-    <div class="fill" style="width:62.4%"></div></div><i>3.1</i></div></div>
-      <p class="why">Taste stands out (4.3/5, 18 mentions)<br><em>“面身弹牙，不坨”</em></p>
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-who ">With Parents</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Fine Dining</span><span class="s g-taste ">Instagrammable</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Refined</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:83.80000000000001%"></div></div><i>4.2</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:64.8%"></div></div><i>3.2</i></div><div class="bar hi"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:66.2%"></div></div><i>3.3</i></div><div class="bar"><b>Environment</b><div class="track">
+    <div class="fill" style="width:69.4%"></div></div><i>3.5</i></div></div>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Taste stands out (4.2/5, 36 mentions)<br><em>“皮够薄，不会一夹就散”</em></p>
       <div class="foot">
-        <span>42 reviews · 92% credible</span>
-        <span class="flag">3 flagged · Details →</span>
+        <span>60 reviews · 93% credible</span>
+        <span class="flag">4 flagged · Details →</span>
       </div>
       </div>
-    </article><article class="card" data-id="s08">
+    </article><article class="card" data-id="s32">
       <div class="thumb ">
-        <img src="images/s08_1.jpg" alt="陳記燒味" loading="lazy">
+        <img src="images/s32_1.jpg" alt="南丫蝦醬炒飯" loading="lazy">
         
       </div>
       <div class="cbody">
       <div class="card-top">
-        <div><h3>陳記燒味</h3><div class="meta">Yau Ma Tei · Siu Mei · $68 pp</div></div>
-        <div class="rt"><div class="score">3.6</div><div class="stars">★★★⯨☆</div></div>
+        <div><h3>南丫蝦醬炒飯</h3><div class="meta">Lamma Island · Stir-Fry · $98 pp</div></div>
+        <div class="rt"><div class="score">4.1</div><div class="stars">★★★★☆</div></div>
       </div>
-      <div class="scenes"><span class="s g-who ">With Parents</span><span class="s g-pace ">Quick Bite</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
-      <div class="bars"><div class="bar"><b>Taste</b><div class="track">
-    <div class="fill" style="width:83.6%"></div></div><i>4.2</i></div><div class="bar"><b>Service</b><div class="track">
-    <div class="fill" style="width:58.8%"></div></div><i>2.9</i></div><div class="bar"><b>Ambience</b><div class="track">
-    <div class="fill" style="width:77.8%"></div></div><i>3.9</i></div><div class="bar"><b>Environment</b><div class="track">
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Local Heritage</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:90%"></div></div><i>4.5</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:80%"></div></div><i>4.0</i></div><div class="bar hi"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:80%"></div></div><i>4.0</i></div><div class="bar"><b>Environment</b><div class="track"></div><i>—</i></div></div>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Taste stands out (4.5/5, 2 mentions)<em>(only 6 reviews — score unstable)</em><br><em>“粒粒有镬气”</em></p>
+      <div class="foot">
+        <span>6 reviews · 100% credible</span>
+        <span class="">Details →</span>
+      </div>
+      </div>
+    </article><article class="card" data-id="s03">
+      <div class="thumb ">
+        <img src="images/s03_1.jpg" alt="鮮入圍煮" loading="lazy">
+        
+      </div>
+      <div class="cbody">
+      <div class="card-top">
+        <div><h3>鮮入圍煮</h3><div class="meta">Causeway Bay · Hotpot · $360 pp</div></div>
+        <div class="rt"><div class="score">3.3</div><div class="stars">★★★☆☆</div></div>
+      </div>
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Late Night</span><span class="s g-taste ">Fine Dining</span><span class="s g-taste ">Instagrammable</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Refined</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:67.80000000000001%"></div></div><i>3.4</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:57.599999999999994%"></div></div><i>2.9</i></div><div class="bar hi"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:71%"></div></div><i>3.5</i></div><div class="bar"><b>Environment</b><div class="track">
+    <div class="fill" style="width:73.4%"></div></div><i>3.7</i></div></div>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Ambience stands out (3.5/5, 11 mentions)<br><em>“炸得脆，不油”</em></p>
+      <div class="foot">
+        <span>61 reviews · 90% credible</span>
+        <span class="flag">6 flagged · Details →</span>
+      </div>
+      </div>
+    </article><article class="card" data-id="s06">
+      <div class="thumb ">
+        <img src="images/s06_1.jpg" alt="東京食堂" loading="lazy">
+        
+      </div>
+      <div class="cbody">
+      <div class="card-top">
+        <div><h3>東京食堂</h3><div class="meta">Causeway Bay · Japanese Izakaya · $240 pp</div></div>
+        <div class="rt"><div class="score">3.2</div><div class="stars">★★★☆☆</div></div>
+      </div>
+      <div class="scenes"><span class="s g-who ">Date Night</span><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Late Night</span><span class="s g-taste ">Fine Dining</span><span class="s g-taste ">Instagrammable</span><span class="s g-taste ">Exotic Flavors</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:70.39999999999999%"></div></div><i>3.5</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:57.99999999999999%"></div></div><i>2.9</i></div><div class="bar hi"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:68.8%"></div></div><i>3.4</i></div><div class="bar"><b>Environment</b><div class="track">
+    <div class="fill" style="width:60%"></div></div><i>3.0</i></div></div>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Taste stands out (3.5/5, 25 mentions)<br><em>“老店就是老店”</em></p>
+      <div class="foot">
+        <span>60 reviews · 91% credible</span>
+        <span class="flag">5 flagged · Details →</span>
+      </div>
+      </div>
+    </article><article class="card" data-id="s01">
+      <div class="thumb ">
+        <img src="images/s01_1.jpg" alt="川辣里酸菜魚" loading="lazy">
+        
+      </div>
+      <div class="cbody">
+      <div class="card-top">
+        <div><h3>川辣里酸菜魚</h3><div class="meta">Mong Kok · Sichuan · $185 pp</div></div>
+        <div class="rt"><div class="score">3.2</div><div class="stars">★★★☆☆</div></div>
+      </div>
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Take It Slow</span><span class="s g-taste ">Instagrammable</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Refined</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:75.2%"></div></div><i>3.8</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:51.2%"></div></div><i>2.6</i></div><div class="bar hi"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:62.2%"></div></div><i>3.1</i></div><div class="bar"><b>Environment</b><div class="track">
+    <div class="fill" style="width:64.8%"></div></div><i>3.2</i></div></div>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Taste stands out (3.8/5, 42 mentions)<br><em>“强烈推荐”</em></p>
+      <div class="foot">
+        <span>84 reviews · 90% credible</span>
+        <span class="flag">8 flagged · Details →</span>
+      </div>
+      </div>
+    </article><article class="card" data-id="s25">
+      <div class="thumb ">
+        <img src="images/s25_1.jpg" alt="星街小酒館" loading="lazy">
+        
+      </div>
+      <div class="cbody">
+      <div class="card-top">
+        <div><h3>星街小酒館</h3><div class="meta">Wan Chai · Bar &amp; Western · $420 pp</div></div>
+        <div class="rt"><div class="score">3.4</div><div class="stars">★★★☆☆</div></div>
+      </div>
+      <div class="scenes"><span class="s g-who ">Date Night</span><span class="s g-who hit">Friends Gathering</span><span class="s g-pace ">Take It Slow</span><span class="s g-pace ">Late Night</span><span class="s g-taste ">Fine Dining</span><span class="s g-taste ">Exotic Flavors</span><span class="s v " title="Inferred from shop photo">Quiet</span><span class="s v " title="Inferred from shop photo">Refined</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:93.39999999999999%"></div></div><i>4.7</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:33.4%"></div></div><i>1.7</i></div><div class="bar hi"><b>Ambience</b><div class="track">
+    <div class="fill" style="width:80%"></div></div><i>4.0</i></div><div class="bar"><b>Environment</b><div class="track">
     <div class="fill" style="width:70%"></div></div><i>3.5</i></div></div>
-      <p class="why">Taste stands out (4.2/5, 28 mentions)<br><em>“crisp skin, juicy meat”</em></p>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Taste stands out (4.7/5, 3 mentions)<em>(only 6 reviews — score unstable)</em><br><em>“意粉 al dente，醬汁掛身”</em></p>
       <div class="foot">
-        <span>60 reviews · 95% credible</span>
-        <span class="flag">3 flagged · Details →</span>
+        <span>6 reviews · 100% credible</span>
+        <span class="">Details →</span>
+      </div>
+      </div>
+    </article><article class="card" data-id="s19">
+      <div class="thumb ">
+        <img src="images/s19_1.jpg" alt="燒烤山莊" loading="lazy">
+        
+      </div>
+      <div class="cbody">
+      <div class="card-top">
+        <div><h3>燒烤山莊</h3><div class="meta">Tai Po · BBQ · $210 pp</div></div>
+        <div class="rt"><div class="score">3.4</div><div class="stars">★★★☆☆</div></div>
+      </div>
+      <div class="scenes"><span class="s g-who hit">Friends Gathering</span><span class="s g-who ">With Parents</span><span class="s g-pace ">Late Night</span><span class="s g-taste ">Instagrammable</span><span class="s v " title="Inferred from shop photo">Lively</span><span class="s v " title="Inferred from shop photo">Down-to-earth</span><span class="s v " title="Inferred from shop photo">Photogenic</span></div>
+      <div class="bars"><div class="bar hi"><b>Taste</b><div class="track">
+    <div class="fill" style="width:69%"></div></div><i>3.5</i></div><div class="bar"><b>Service</b><div class="track">
+    <div class="fill" style="width:61.8%"></div></div><i>3.1</i></div><div class="bar"><b>Ambience</b><div class="track"></div><i>—</i></div><div class="bar"><b>Environment</b><div class="track">
+    <div class="fill" style="width:84.00000000000001%"></div></div><i>4.2</i></div></div>
+      <p class="why"><b>Profile: Friends Gathering</b><br>Environment stands out (4.2/5, 5 mentions)<br><em>“老板会过来问味道怎么样”</em></p>
+      <div class="foot">
+        <span>22 reviews · 95% credible</span>
+        <span class="flag">1 flagged · Details →</span>
       </div>
       </div>
     </article></div>
@@ -1538,7 +1540,6 @@ renderGroups();
 renderQuery();
 render();
 </script>
-
 
 
 
